@@ -10,9 +10,15 @@
     ],
     "compilerOptions": {
         "jsx": "react-jsx",
-      "baseUrl": ".",
-      "paths": {
-        "@/*": ["./src/*"]
-      }
+        "baseUrl": ".",
+        "paths": {
+          "@/*": ["./src/*"]
+        },
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "skipLibCheck": true
     }
   }

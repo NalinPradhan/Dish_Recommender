@@ -1,35 +1,21 @@
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
-import { Button } from "../ui/button"
-import { Bell, Home, Search, Settings } from "lucide-react"
-import React from "react";
-
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Button } from "../ui/button";
+import { Bell, Home, Search, Settings } from "lucide-react";
 
 export default function CircularNavbar() {
   return (
     // add fixed  to the nav class name to make the navbar stick to the bottom of the screen
-    <nav className=" bottom-0 left-0 right-0 border-t bg-background p-4 backdrop-blur-sm">
-      <div className="container mx-auto flex items-center justify-between">
-        <Button size="icon" className="rounded-full" variant="ghost">
+    <nav className="bg-green-300 bottom-0 left-0 right-0 border-t  p-4 backdrop-blur-sm">
+      <div className=" container gap-5 mx-auto flex items-center justify-between">
+        <Button size="icon" className="rounded-b-none" variant="ghost">
           <Home className="h-6 w-6" />
           <span className="sr-only">Home</span>
         </Button>
-        <Button size="icon" className="rounded-full" variant="ghost">
-          <Search className="h-6 w-6" />
-          <span className="sr-only">Search</span>
+        <Button size="icon" className="rounded-b-none" variant="ghost">
+          <img src="/avatar.png" className="w-7"></img>
+          <span className="sr-only">Home</span>
         </Button>
-        <Button size="icon" className="rounded-full bg-primary text-primary-foreground">
-          <Bell className="h-6 w-6" />
-          <span className="sr-only">Notifications</span>
-        </Button>
-        <Button size="icon" className="rounded-full" variant="ghost">
-          <Settings className="h-6 w-6" />
-          <span className="sr-only">Settings</span>
-        </Button>
-        <Avatar>
-          <AvatarImage src="/placeholder-user.jpg" alt="User" />
-          <AvatarFallback>U</AvatarFallback>
-        </Avatar>
       </div>
     </nav>
-  )
+  );
 }
