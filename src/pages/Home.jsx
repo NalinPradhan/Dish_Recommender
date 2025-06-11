@@ -1,5 +1,9 @@
+import CircularNavbar from "../components/spectrumui/circularnavbar";
+
 export default function Home() {
-    return(<>
+    return(<div >
+        <CircularNavbar/>
+    </div>
         
-    </>)
+    )
 }
